@@ -48,7 +48,7 @@ function setup() {
   ground.x = ground.width /5;
   ground.velocityX = -(6 + 3 * score/100);
   
-  gameOver = createSprite(canvasX,200,40,10);
+  gameOver = createSprite(displayWidth/2, displayHeight/5);
   gameOver.addImage(gameOverImg);
   
   restart = createSprite(displayWidth/2, 40 + displayHeight/10);
@@ -71,7 +71,7 @@ function setup() {
 
 function draw() {
   //trex.debug = true;
-  background("blue");
+  background("white");
   text("Score: "+ score, 500,50);
   
   if (gameState===PLAY){
